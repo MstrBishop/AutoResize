@@ -105,28 +105,28 @@ var TokenResize = TokenResize || (function() {
 		switch(args[0]) {
             case '!tr':
                 switch(args[1]) {
-    				case '--auto-off':
-						performAutoOff();
-						break;
-					case '--auto-on':
-						performAutoOn();
-						break;
-                    case '--player-off':
-    					performPlayerOff();
-						break;
-					case '--player-on':
-						performPlayerOn();
-						break;
-                    case '--target-on':
-    					isTargetted();
-						break;
-                    case '--target-off':
-    					isSelected();
-						break;
-                    case '--help':
-        				showHelp();
-						break;
-				}
+    			case '--auto-off':
+				performAutoOff();
+				break;
+			case '--auto-on':
+				performAutoOn();
+				break;
+    			case '--player-off':
+    				performPlayerOff();
+				break;
+			case '--player-on':
+				performPlayerOn();
+				break;
+    			case '--target-on':
+    				isTargetted();
+				break;
+    			case '--target-off':
+    				isSelected();
+				break;
+    			case '--help':
+				showHelp();
+				break;
+			}
                 if( args[2] && state.PlayerResize.locked && !playerIsGM(msg.playerid) ) {
                     sendChat("", "/desc Check player resize.");
 					return;
@@ -295,7 +295,7 @@ var TokenResize = TokenResize || (function() {
 	},
 	RegisterEventHandlers = function() {
 		on('change:graphic', autoChange);
-        on('chat:message', handleInput);
+        	on('chat:message', handleInput);
 	};
  
 	return {
